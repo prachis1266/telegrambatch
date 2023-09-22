@@ -1,0 +1,35 @@
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 500px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background: #4caf50;
+    margin-top: 20px;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background: #007bff; 
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  

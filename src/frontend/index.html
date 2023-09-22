@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Require Electron modules -->
+    <script>
+      const {app, BrowserWindow} = require('electron')
+
+      // Keep window reference
+      let win
+
+      // Create window on app ready
+      app.on('ready', () => {
+
+        win = new BrowserWindow({
+          width: 800,
+          height: 600,
+          webPreferences: {
+            nodeIntegration: true
+          }
+        })
+
+        // Load frontend
+        win.loadFile('app.js')
+
+      })
+
+      // Quit app on close  
+      app.on('window-all-closed', () => {
+        if (process.platform !== 'darwin') {
+          app.quit()
+        }
+      })
+
+    </script>
+
+  </body>
+</html>
